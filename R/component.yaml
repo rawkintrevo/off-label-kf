@@ -1,0 +1,16 @@
+name: An R Example
+description: This is probably the worst example that could possibly exist.
+inputs:
+  - {name: InputPath, type: String, description='Data for Input 1'}
+  - {name: Formula, type: String, description='Formula to pass to lm'} # The default values must be specified as YAML strings.
+outputs:
+  - {name: Output 1, description='Output 1 data'}
+implementation:
+  container:
+    image: docker.io/rawkintrevo/reusable-R-component:latest
+    command: [
+      Rscript, /pipelines/component/src/program.R,
+      --file,  {inputPath:  InputPath},
+      --formula,       {inputValue: Formula},
+      --out, {outputPath: Output},
+    ]
