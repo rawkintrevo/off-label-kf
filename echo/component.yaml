@@ -2,7 +2,7 @@ name: echo - KF echo tester
 description: A stupid test to make sure Im making components correctly.
 
 inputs:
-  - {name: Thing to echo, default: 'epstein didnt kill himself', help: What do you want to echo?}
+  - {name: Thing to echo, default: 'epstein didnt kill himself', help: What do you want to echo}
 
 outputs:
   - {name: The echo, type: String, help: Should be same as what you put in}
@@ -12,5 +12,5 @@ implementation:
     image: docker.com/rawkintrevo/kf-echo-test
     command: [
       /echo.sh,
-      {inputPath: Thing to echo},
+      {inputValue: Thing to echo},
     ]
