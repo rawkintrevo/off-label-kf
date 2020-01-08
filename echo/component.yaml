@@ -9,7 +9,7 @@ outputs:
 
 implementation:
   container:
-    image: docker.com/rawkintrevo/kf-echo-test
+    image: rawkintrevo/kf-echo-test
     command: [
       /echo.sh,
       {inputPath: Thing to echo},
