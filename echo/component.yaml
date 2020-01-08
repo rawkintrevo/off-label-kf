@@ -11,6 +11,5 @@ implementation:
   container:
     image: rawkintrevo/kf-echo-test
     command: [
-      /echo.sh,
-      {inputValue: Thing to echo},
+      /echo.sh {inputValue: Thing to echo},
     ]
